@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root{
+            --theme-color:blue; /*varible can be used antwhere*/
+        }
+        body{
+            margin:0;
+        }
+        header{
+            background-image: url(https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-346529.jpg&fm=jpg);
+            height: 70vh;
+            color:white;
+            background-size: cover;
+            text-align:center;
+            padding-top: 200px;
+            box-sizing: border-box;
+        }
+        .hero-title{
+            margin:0;
+        }
+        .hero-subtitle{
+            text-align: center;
+        }
+        .hero-btn{
+            padding:10px 20px;
+            border: none;
+            border-radius: 5px;;
+        }
+        .feature-card{
+            border: 2px solid red;
+            text-align:center;
+            padding: 20px;
+            transition-duration: 0.3s;
+            border-radius: 10px;;
+        }
+        .feature-card:hover{
+            background-color: yellowgreen;
+            color:white;
+        }
+        .card-container{
+            display: flex;
+            gap: 20px;
+        }
+        .section-title{
+            text-align: center;
+            font-size: 3rem;;
+        }
+        .section-feature{
+            font-family: roboto;
+            padding:50px 30px;
+            color:blue;
+        }
+        .section-video{
+            padding: 50px 300px;
+        }
+        .section-video video{
+            width: 500px
+        }
+        .section-contact{
+            padding: 50px 100px;
+            font-family: Roboto;
+        }
+        .text-input, .text-input-area{
+            width: 1000px;
+            padding: 10px;
+            margin-bottom: 30px;
+            display: block;
+            text-align: center;
+        }
+        .contact-btn{
+            padding: 10px 20px;
+            background-color: blue;
+            color:white;
+            border:2px;
+            border-radius: 5px;
+        }
+        footer{
+            padding: 50px 300px;
+            font-family: roboto;
+            background-color: blue;
+            color: white;
+             
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .social-link{
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+        
+
+
+    
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hero-title" style="text-align: center; font-size: 4rem">Welcome to my site</h1>
+        <h3 class="hero-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ipsa quae adipisci quia fuga architecto aliquam ullam odio dolorum. Voluptas maiores doloremque ab reiciendis eos. Quibusdam itaque dolorem reiciendis dicta.</h3>
+        <button class="hero-btn">learn more</button>
+    </header>
+    
+    <main>
+        <section class="section-feature">
+            <h2 class="section-title">Our Features</h2>
+        <div class="card-container">
+
+            <div class="feature-card">
+                <i class="fa-5x fa-solid fa-rocket"></i>
+                <h3>Fast Delivery</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit deleniti alias sapiente commodi ipsa! Similique praesentium nam nobis impedit, minima consequatur laboriosam aliquam eaque, a quasi quaerat fugiat ullam.</p>
+            </div>
+
+            <div class="feature-card">
+                <i><i class="fa-5x fa-solid fa-city"></i></i>
+                <h3>Delivery Address</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus eum soluta porro adipisci, autem similique tenetur ducimus aperiam consequuntur eligendi?</p>
+
+            </div>
+
+        </div>
+        </section>
+        <section class="section-video">
+            <h2 class="section-title">Our Work</h2>
+            <video src="video.mp4" autoplay controls muted loop></video>
+        </section>
+
+        <section class="section-contact">
+            <h2 class="section-title">Contact Us</h2>
+            <form>
+                <label>Name</label>
+                <input type="text" class="text-input">
+                <label>E-mail</label>
+                <input type="Email" class="text-input">
+                <label>Contact No.</label>
+                <input type="number" class="text-input">
+                <label>Message</label>
+                <textarea row="10" class="text-input-area"></textarea>
+
+                <button class="contact-btn">Submit</button>
+            </form>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <h2 class="footer-title">My website Name</h2>
+            <p>&copy; 2024 Website Name</p>
+            <button class="main-btn white-btn">Get Started</button>
+        </div>
+        <div>
+            <h3>Visit Us at:</h3>
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">LinledIn</a>
+            <a href="#" class="social-link">x(Twitter)</a>
+            
+        </div>
+        <div>
+            <h3>Visit Us at:</h3>
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">LinledIn</a>
+            <a href="#" class="social-link">x(Twitter)</a>
+            
+        </div>
+
+    </footer>
+
+</body>
+</html>

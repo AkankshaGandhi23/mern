@@ -1,0 +1,14 @@
+.main-btn{
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.white-btn{
+    border: 2px solid white;
+    color: white;
+}
+.dark-btn{
+    border: 2px solid black;
+    color: black;
+}
