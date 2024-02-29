@@ -18,7 +18,7 @@ const Home = () => {
       <p>{addNums(45 ,67  )}</p>
 
       <input type = "text"/>
-      <h1 style = { {color : 'blue' , fontSize : 20 } }>my next.js app</h1>
+      <h1 style = { {color : 'blue' , fontSize : 20} }>my next.js app</h1>
       
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nisi velit, similique repellat quod iste nobis eligendi animi doloribus fuga.</p>
     </div>
