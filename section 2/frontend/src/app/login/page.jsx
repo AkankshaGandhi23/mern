@@ -4,7 +4,8 @@ import classes from './login.module.css';
 const Login = () => {
   return (
     <div>
-      Login
+      
+     Login
       <button className={classes.myBtn}> Submit</button>
       <button className='myBtn'> Login Now</button>
       

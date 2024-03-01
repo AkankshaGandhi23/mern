@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Home = () => {
 
   const siteTitle = 'My Website Name';
@@ -21,9 +20,10 @@ const Home = () => {
       <h1 style = { {color : 'blue' , fontSize : 20} }>my next.js app</h1>
       
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nisi velit, similique repellat quod iste nobis eligendi animi doloribus fuga.</p>
+      
     </div>
   )
 }
 
-export default Home
+export default Home;
 
