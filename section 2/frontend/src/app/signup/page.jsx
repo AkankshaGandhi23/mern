@@ -1,9 +1,35 @@
+'use client';
 import Link from 'next/link';
 import React from 'react'
+import { useFormik } from 'formik';
 
-const Signup = () => {
+const Signup =() => {
+  const signupValidationSchema = yup.obeject().shape({
+    name : Yup.string().required('Name is required').min(3,'Name is too short'),
+    email : Yup.string() .email('Invalid email').required('Email is required'),
+    password : Yup.string().required('password is required').min(6,'password is too short')
+    .matches(/[A-Z]/,"Password must contain uppercase ")
+    .matches(/[a-z]/, "Password must contain lowercase")
+    .matches(/[0-9]/,"Password must contain numbers ")
 
-  
+    confirmPassword: Yup.string().required('Comfirm Password is required').oneOf([Yup.ref('password'),null], 'Password must match'),
+  })
+}
+
+const Signup = useFormik({
+  initialValues : {
+    email : '',
+    name : '',
+    password :'',
+    confirmPassword :''
+  },
+  onSubmit: (values),{resetForm} => {
+    console.log(values);
+    resetForm();
+  }
+  validationSchema : signupValidationSchema
+});
+
   return (
     <section className="vh-100 bg-primary-subtle">
       <div className="container py-5 h-100">
@@ -33,7 +59,7 @@ const Signup = () => {
                     <h3 className="mb-5 text-primary fw-bold">
                       Registration Form
                     </h3>
-                    <form>
+                    <form onSubmit ={signup.handleSubmit}>
 
                       <div class="mb-3">
                         <label for="" class="form-label">Email Address</label>
@@ -112,6 +138,6 @@ const Signup = () => {
     </section>
 
   )
-}
+
 
 export default Signup;
