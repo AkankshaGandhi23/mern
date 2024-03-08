@@ -1,7 +1,13 @@
 const express =require('express'); //import
 const app = express();  //initialize
 
+const postRouter = require('./routers/postRouter');
+
+//middleware
+app.use('/post', postRouter);
+
 const port = 5000;
+
 //start express server
 
 app.get('/',(req , res) => {
