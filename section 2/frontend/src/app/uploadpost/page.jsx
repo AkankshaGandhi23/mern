@@ -14,13 +14,24 @@ const UploadPost = () => {
         },
         onSubmit: (values) => {
             console.log(values);
+            
 
            // sendinf reqest to backend
 
             fetch('http://localhost:5000/post/add', {
                 method: 'POST',
-                body : JSON.stringify( values)  //convert js to json
+                body : JSON.stringify(values),     //convert js to json
+                headers : {
+                    'Content-Type' : 'application/json'
+                } 
             })
+            .then((response) => {
+                console.log(response.status);
+                
+            }).catch((err) => {
+                console.log(err);
+                
+            });
         }
     })
 

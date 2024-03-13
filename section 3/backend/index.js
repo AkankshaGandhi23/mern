@@ -1,4 +1,4 @@
-const express =require('express'); //import
+const express = require('express'); //import
 
 const cors = require('cors');
 const app = express();  //initialize
